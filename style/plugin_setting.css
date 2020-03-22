@@ -1,0 +1,9 @@
+.jconfirm {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.jconfirm .jconfirm-box {
+    margin-left:20vw;
+    margin-right:20vw;
+    background: linear-gradient(to right, white,#c54444);
+}

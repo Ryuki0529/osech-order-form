@@ -1,0 +1,390 @@
+/* 値の初期化 */
+* {
+    padding:0px;
+    margin:0px;
+}
+
+body {
+    font-family:
+        'Lato', 'Noto Sans JP',
+        '游ゴシック Medium',
+        '游ゴシック体', 'Yu Gothic Medium',
+        YuGothic, 'ヒラギノ角ゴ ProN',
+        'Hiragino Kaku Gothic ProN',
+        'メイリオ', Meiryo, 'ＭＳ Ｐゴシック',
+        'MS PGothic', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    position: relative;
+    display: block;
+    margin-bottom: 1em;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    display: block;
+    width: 60px;
+    height: 5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: black;
+    border-radius: 2px;
+}
+
+h3 {
+    font-size:20px;
+    padding:8px;
+    text-align: center;
+}
+
+/*********************************/
+/* ファーストビューのスライドショー */
+/*********************************/
+.top-slide {
+    position: relative;
+    height:100vh;
+    width:100%;
+    padding:0px;
+    margin:0px;
+}
+
+.site-title {
+    position: absolute;
+    top:40%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    width:100%;
+    max-width:800px;
+    height:auto;
+    font-size: 28px;
+    color:white;
+    padding:0px;
+    text-align: center;
+    display: none;
+}
+
+/************************/
+/* おせちのセレクトエリア */
+/************************/
+.osech-select-wrapper {
+    width:100%;
+    height:auto;
+    padding:20px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+.osech-select-area {
+    width:49.5%;
+    height:auto;
+    float:left;
+}
+
+.osech-drop-area {
+    width:49.5%;
+    height:auto;
+    float:left;
+}
+
+.select_back {
+    background-image: url('../img/sasa.jpg');
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.category-1 {
+    /*background:rgba(233, 226, 226, 0.3);*/
+    background: rgba(36, 47, 39, 0.3);
+    color:white;
+    border-radius: 20px;
+    padding-top:0px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    margin:10px 0px;;
+    display: block;
+}
+
+.category-1-color {
+    border:3px solid gray;
+}
+
+.category-2 {
+    /*background:rgba(199, 210, 243, 0.3);*/
+    background: rgba(36, 47, 39, 0.3);
+    color:white;
+    border-radius: 20px;
+    padding-top:0px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    margin:10px 0px;
+    display: block;
+}
+
+.category-2-color {
+    border:3px solid blue;
+}
+
+.category-3 {
+    /*background:rgba(216, 214, 203, 0.3);*/
+    background: rgba(36, 47, 39, 0.3);
+    color:white;
+    border-radius: 20px;
+    padding-top:0px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    margin:10px 0px;
+    display: block;
+}
+
+.category-3-color {
+    border:3px solid gold;
+}
+
+.osech-drop {
+    position: relative;
+    list-style: none;
+    min-width:40%;
+    min-height:640px;
+    margin:20px 20px;
+    border:10px solid rgb(43, 29, 29);
+    background:rgb(156, 18, 18);
+}
+
+/* アイテムの情報の表示エリア */
+.select-content {
+    width:100%;
+    padding:10px;
+    display: block;
+}
+
+.select-numver {
+    text-align: center;
+    font-size: 120%;
+    width:49.5%;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.select-drop {
+    text-align: center;
+    font-size: 120%;
+    width:49.5%;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* アイテムセレクタの設定（共通） */
+.item {
+    white-space: nowrap;
+    list-style: none;
+    min-height:132px;
+    overflow-x: scroll;
+}
+
+.item li {
+    margin:10px;
+    width:150px;
+    text-align: center;
+    padding:0px;
+    cursor: move;
+    background:white;
+    bottom: 0px;
+    position: relative;
+    transition: all .7s;
+    color:black;
+    display: inline-block;
+}
+
+.item li:hover {
+    bottom: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(102, 100, 100, 0.4);
+}
+
+.item img {
+    width:100%;
+    height:100px;
+}
+
+.ghost {
+    opacity: .6;
+    color:red;
+    border:3px solid red;
+}
+
+/* デコレーションエリアのスタイル */
+.decoration_back {
+    background-image:url('../img/decoration.jpg');
+    background-size:cover;
+    border-radius:20px;
+    margin:20px;
+    color:white;
+}
+
+.decoration_back_cover {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius:20px;
+}
+
+.decoration_select {
+    white-space: nowrap;
+    list-style: none;
+    min-height:132px;
+    overflow-x: scroll;
+    display: block;
+}
+
+.decoration_select li {
+    margin:10px;
+    width:150px;
+    height:150px;
+    text-align: center;
+    padding:0px;
+    cursor: move;
+    background:white;
+    transition: all .7s;
+    color:black;
+    border-radius:50%;
+    border:5px dotted rgb(128, 248, 128);
+    display: inline-block;
+}
+
+.decoration_select img {
+    width:150px;
+    height:150px;
+    border-radius:50%;
+}
+
+/* ドロップエリアのスタイル */
+.osech-drop li {
+    width: 33.333%;
+    text-align: center;
+    background:white;
+    display: inline-block;
+    cursor: move;
+    box-sizing: border-box;
+}
+
+.osech-drop img {
+    width:100%;
+    height:180px;
+}
+
+/* 飾り付けのスタイル */
+.decoration {
+    background:yellow;
+    border:5px solid gray;
+    border-radius:50%;
+    min-width:100px;
+    min-height:100px;
+}
+
+.decoration li {
+    margin:0px;
+    min-width:100px;
+    min-height:100px;
+    width:100%;
+    text-align: center;
+    padding:0px;
+    cursor: move;
+    background:white;
+    color:black;
+    border-radius:50%;
+    display: inline-block;
+}
+
+.decoration img {
+    width:100px;
+    height:100px;
+    border-radius:50%;
+}
+
+.doco_left_top {
+    position: absolute;
+    top: 24%;
+    left: 22%;
+}
+
+.doco_right_top {
+    position: absolute;
+    top: 24%;
+    left: 57%;
+}
+
+.doco_left_bottom {
+    position: absolute;
+    top: 58%;
+    left: 22%;
+}
+
+.doco_right_bottom {
+    position: absolute;
+    top: 58%;
+    left: 57%;
+}
+
+/* 飾り付けドロップエリア（jQueryの処理) */
+.first_btn {
+    display: none;
+}
+
+/* 料金表示エリア */
+.price_info {
+    color:black;
+    border-radius: 20px;
+    margin:20px;
+    border-radius: 20px;
+    display: block;
+}
+
+.price_item {
+    width:24.6%;
+    height:auto;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.price_item_head {
+    font-size:18px;
+    padding:10px;
+}
+
+.price {
+    font-size:22px;
+    padding:10px;
+    color:red;
+}
+
+/********************/
+/*  フッタースタイル  /
+/********************/
+footer {
+    clear:both;
+}
+
+.footer {
+    background-color: #114d4d;
+    height:35px;
+    width:100%;
+    padding:0px;
+    margin:0px;
+}
+
+small {
+    color:white;
+    line-height:35px;
+}
